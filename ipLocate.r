@@ -9,7 +9,7 @@ telize <- function(ip, format = ifelse(length(ip)==1,'list','dataframe'))
         if (format == 'dataframe')
             ret <- data.frame(t(unlist(ret)))
         print(ret)
-	fi <- write.table(ret, file="/home/nemo/amoworldwide/data.csv", sep="\t", col.names=FALSE, append=TRUE)
+	fi <- write.table(ret, file="/home/user/folder/data.csv", sep="\t", col.names=FALSE, append=TRUE)
 	return(ret)
     } else {
         ret <- data.frame()
@@ -19,7 +19,7 @@ telize <- function(ip, format = ifelse(length(ip)==1,'list','dataframe'))
             ret <- rbind(ret, r)
         }
 	print(ret)
-	fi <- write.table(ret, file="/home/nemo/amoworldwide/data.csv", sep="\t", col.names=FALSE, append=TRUE)	
+	fi <- write.table(ret, file="/home/user/folder/data.csv", sep="\t", col.names=FALSE, append=TRUE)	
         return(ret)
     }
 }
